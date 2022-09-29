@@ -1,4 +1,7 @@
 import logging
+
+import aiogram.types
+
 import config
 import emoji
 from aiogram import Bot, Dispatcher, executor, types
@@ -31,13 +34,6 @@ async def mute(message: types.Message):
                 "\N{pig}") + "СВИНЬЯ ХРЮКНУЛА" + emoji.emojize("\N{pig}") + emoji.emojize(
                 "\u2b06"))
 
-        if "хрюканина" in text:
-            db.upd_timer(10)
-
-        if db.timer() and message.from_user.id == 5201297228:
-            await bot.send_message(config.GROUP_ID, emoji.emojize("\u2b06") + emoji.emojize(
-                "\N{pile of poo}") + "ДЕБИЛ НАСРАЛ" + emoji.emojize("\N{pile of poo}") + emoji.emojize("\u2b06"))
-
     else:
         await message.delete()
 
@@ -47,9 +43,8 @@ async def send_ID(message: types.Message):
     await bot.send_message(message.from_user.id, f"ID: {message.from_user.id}")
 
 
-@dp.message_handler()
+@dp.message_handler(content_types=types.ContentType.ANY)
 async def msg_handler(message: types.Message):
-    text = message.text.lower()
     if not db.user_exists(message.from_user.id):
         db.add_user(message.from_user.id)
 
@@ -59,13 +54,6 @@ async def msg_handler(message: types.Message):
             await bot.send_message(config.GROUP_ID, emoji.emojize("\u2b06") + emoji.emojize(
                 "\N{pig}") + "СВИНЬЯ ХРЮКНУЛА" + emoji.emojize("\N{pig}") + emoji.emojize(
                 "\u2b06"))
-
-        if "хрюканина" in text:
-            db.upd_timer(10)
-
-        if db.timer() and message.from_user.id == 5201297228:
-            await bot.send_message(config.GROUP_ID, emoji.emojize("\u2b06") + emoji.emojize(
-                "\N{pile of poo}") + "ДЕБИЛ НАСРАЛ" + emoji.emojize("\N{pile of poo}") + emoji.emojize("\u2b06"))
 
     else:
         await message.delete()
