@@ -51,8 +51,7 @@ async def msg_handler(message: types.Message):
         print(message.from_user.id)
         if message.from_user.id == 304555106:
             await bot.send_message(config.GROUP_ID, emoji.emojize("\u2b06") + emoji.emojize(
-                "\N{pig}") + "СВИНЬЯ ХРЮКНУЛА" + emoji.emojize("\N{pig}") + emoji.emojize(
-                "\u2b06"))
+                "\N{pig}") + "СВИНЬЯ ХРЮКНУЛА" + emoji.emojize("\N{pig}") + emoji.emojize("\u2b06"))
 
     else:
         await message.delete()
