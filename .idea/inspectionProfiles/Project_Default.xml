@@ -1,0 +1,50 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+          <option value="E712" />
+          <option value="E731" />
+          <option value="E701" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="PyQt5.QtCore.Qt.PointingHandCursor" />
+          <option value="object.*" />
+          <option value="pyqtgraph.Qt.QtGui.QApplication" />
+          <option value="opensimplex.opensimplex.OpenSimplex.noise2d" />
+          <option value="pyqtgraph.Qt.QtGui.QTimer" />
+          <option value="PyQt6.QtWidgets.clicked.connect" />
+          <option value="PyQt6.QtCore.timeout.connect" />
+          <option value="PyQt6.QtWidgets.currentIndexChanged.connect" />
+          <option value="PyQt5.QtNetwork.connected.*" />
+          <option value="PyQt5.QtCore.readyRead.connect" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
