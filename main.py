@@ -18,7 +18,6 @@ db = Database('database.db')
 @dp.message_handler(commands=["mute"], commands_prefix="/")
 async def mute(message: types.Message):
     if not db.mute(message.from_user.id):
-        text = message.text.lower()
         if str(message.from_user.id) in config.ADMIN_ID:
             if not message.reply_to_message:
                 await message.reply("Эта команда должна быть ответом на сообщение")
