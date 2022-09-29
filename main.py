@@ -1,6 +1,5 @@
 import sqlite3
 
-import requests
 from datetime import datetime
 import logging
 import config
